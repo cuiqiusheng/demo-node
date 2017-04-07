@@ -1,0 +1,16 @@
+{
+  "name": "demo-node",
+  "version": "1.0.0",
+  "description": "my node project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
+}
