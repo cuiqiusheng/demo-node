@@ -1,7 +1,25 @@
 var path = require('path');
 var express = require('express');
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+    host: '127.0.0.1',
+    user: 'root',
+    password: '',
+    database:'jacob'
+});
 var ejs = require('ejs');
 var app = express();
+
+connection.connect();
+// 查询
+connection.query('SELECT * from `main`', function(err, rows, fields) {
+  if (err) throw err;
+  console.log('**************************************');
+  console.log(rows);
+  console.log('**************************************');
+});
+//关闭连接
+connection.end();
 
 // 设置静态文件目录
 app.use(express.static(path.join(__dirname, 'public')));
