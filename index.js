@@ -14,19 +14,19 @@ app.set('view engine', 'html');
 app.get('/', function(req, res) {
   res.redirect('login');
 });
-
+// 登录页
 app.get('/login', function(req, res) {
   res.render('login');
 });
-
+// 注册页
 app.get('/register', function(req, res) {
   res.render('register');
 });
-
+// 登陆成功
 app.get('/content', function(req, res) {
   res.render('content');
 });
-
+// 监听8000端口
 app.listen(8000);
 
 
